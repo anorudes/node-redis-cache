@@ -102,7 +102,7 @@ const Cache = {
       // Update type data and timestamp if we not have key
 
       // Set timestamp for type
-      const newTimestamp = await this._updateTypeTimestamp(redisTypeKey);
+      const newTimestamp = this._updateTypeTimestamp(redisTypeKey);
 
       // Set data for type
       const redisFullKey = `${redisTypeKey}_${newTimestamp}`;
@@ -126,7 +126,7 @@ const Cache = {
     }
   },
 
-  async _updateTypeTimestamp(redisTypeKey) {
+  _updateTypeTimestamp(redisTypeKey) {
     // Update timestamp for type
     const newTimestamp = Date.now();
     const redisFullTimestampKey = `${redisTypeKey}_timestamp`;
