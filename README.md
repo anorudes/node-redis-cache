@@ -1,4 +1,4 @@
-# Redis cache module
+# Node redis cache
 
 Example of using redis with nested structure and timestamp keys.
 
