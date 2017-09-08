@@ -6,9 +6,9 @@ bluebird.promisifyAll(redis.RedisClient.prototype);
 const redisClient = redis.createClient();
 
 const redisBase = {
-  development: 3,
-  test: 4,
-  production: 5,
+  development: 0,
+  test: 1,
+  production: 2,
 };
 
 redisClient.select(redisBase[process.env.NODE_ENV]);
